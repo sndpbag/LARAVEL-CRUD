@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 class="text-blue-400 text-[50px]">hi this is Details page</h2>
+  
 
-<table class="min-w-full divide-y divide-gray-200 bg-white shadow-md rounded-lg overflow-hidden">
+    <a class="p-5 bg-amber-600 mt-40" href="{{url("/create")}}">Create User</a>
+
+
+<table class="min-w-full divide-y divide-gray-200 bg-white shadow-md rounded-lg overflow-hidden mt-40">
     <thead class="bg-gray-800 text-white">
         <tr>
             <th class="px-6 py-3 text-left text-sm font-semibold">Name</th>
@@ -25,7 +28,7 @@
             <td class="px-6 py-4 text-sm text-gray-800">{{ $person->email }}</td>
             <td class="px-6 py-4 text-sm text-gray-800">{{ $person->mobile }}</td>
             <td class="px-6 py-4 text-sm text-gray-800">
-                <a href="#" class="text-blue-500 hover:underline">Edit</a> |
+                <a href="{{route("user.edit",$person->id)}}" class="text-blue-500 hover:underline">Edit</a> |
                 <a href="#" class="text-red-500 hover:underline">Delete</a>
             </td>
         </tr>

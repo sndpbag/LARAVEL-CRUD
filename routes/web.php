@@ -12,4 +12,7 @@ Route::get('/home', function () {
 //     return view('document.details');
 // });
 
-Route::get("/details",[DocumentController::class, "details_page"]);
+Route::get("/details",[DocumentController::class, "details_page"])->name("user.index");
+Route::get("/create",[DocumentController::class, "create"]);
+Route::post("/store",[DocumentController::class, "store"])->name("user.create");
+Route::get("/edit_page/{id}",[DocumentController::class, "edit_page"])->name("user.edit");
